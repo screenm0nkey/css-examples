@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Modal</title>
+    <style>
+        ul { margin:0; list-style: none; padding:0;}
+        .modal {}
+        .header{background-color: #0b97c4}
+        .footer{background-color: lightcoral}
+        .nav {background-color: lightpink}
+        .one {background-color: goldenrod}
+        .content {background-color: greenyellow}
+        .three {background-color: olivedrab}
+
+        .modal, .body {
+            display : flex;
+            flex-flow : row wrap;
+        }
+
+        .header, .body, .footer, .one, .three {
+            flex : 1 100%;
+        }
+
+        .nav {
+            flex-basis: 30%;
+        }
+        .content {
+            flex: 1 70%;
+        }
+
+        @media all and (min-width: 700px) {
+            .nav, .col {  flex: 1 auto;  }
+            .nav     { order : 1; }
+            .one     { order : 2; }
+            .content { order : 3; flex: 1.5 auto; }
+            .three   { order : 4; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="modal">
+    <div class="header">Header</div>
+    <div class="body">
+        <ul class="nav">
+            <li>Nav Item</li>
+            <li>Nav Item</li>
+            <li>Nav Item</li>
+        </ul>
+        <div class="col content">Main Content</div>
+        <div class="col one">Col 1</div>
+        <div class="col three">Col 3</div>
+    </div>
+    <div class="footer">Footer</div>
+</div>
+
+</body>
+</html>
