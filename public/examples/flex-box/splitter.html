@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>Flex Item Splitter</title>
+    <style>
+        body, html {
+            height: 100%;
+            padding: 0;
+            margin: 0;
+        }
+
+        /* .splitter-container creates a top and bottom area for the splitter, hence flex column */
+        .splitter-container {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            width : 100%;
+        }
+
+        .splitter-container > div {
+            background-color: rgb(3, 3, 97);
+        }
+
+        .splitter-container > div.top {
+            flex: initial;
+            height: 50%;
+        }
+
+        .splitter-container > div.bottom {
+            flex: 1;
+            /* display and flex-direction are needed to make context height fill 100%. remove them and see */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .splitter-container .h-divider {
+            flex : none;
+            cursor: ns-resize;
+            height: 10px;
+            background-color: darkgoldenrod;
+        }
+
+        .splitter {
+            /* .splitter is a flex item and also a flex container, hence the flex:1, which sets it's height */
+            flex : 1;
+            display: flex;
+            flex-flow: row nowrap; /*this is a shorthand flex-direction and flex-wrap*/
+            align-items: stretch;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .splitter > div {
+            flex : 1;
+            background-color: gray;
+            overflow: hidden;
+            overflow-y: auto;
+        }
+
+        /* flex:inital is same as flex:0 1 auto (flex-grow, flex-shrink, flex-basis)  */
+        .splitter > div.left {
+            flex : 0 1 auto; /* its the auto here which allows us to resize the div */
+            width:50%;
+        }
+
+        .splitter > div.v-divider {
+            flex : none;
+            width : 10px;
+            cursor: ew-resize;
+            background-color: darkgoldenrod;
+        }
+    </style>
+</head>
+<body>
+
+<div class="splitter-container">
+    <div class="top" style="height:24%">
+        <div class="splitter">
+            <div class="left" style="width:29%"><span>Top Left</span></div>
+            <div class="v-divider">&NonBreakingSpace;</div>
+            <div class="right"><span>Top Right</span></div>
+        </div>
+    </div>
+    <div class="h-divider">&nbsp;</div>
+    <div class="bottom">
+        <div class="splitter">
+            <div class="left" style="width:69%"><span>Bottom Left</span></div>
+            <div class="v-divider">&NonBreakingSpace;</div>
+            <div class="right">
+                <span style="display: block; height: 1000px; background-color: lightgoldenrodyellow">Bottom Left</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+</body>
+</html>
