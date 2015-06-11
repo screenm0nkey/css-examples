@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="/css/reset.css"/>
+    <style>
+        .group:before,
+        .group:after {
+            content:"";
+            display:table;
+        }
+        .group:after {
+            clear:both;
+        }
+        .group {
+            border: 1px solid black;
+            zoom:1; /* For IE 6/7 (trigger hasLayout) */
+        }
+        p {
+            float: left;
+        }
+    </style>
+</head>
+<body>
+<a href="https://css-tricks.com/pseudo-element-roundup/">https://css-tricks.com/pseudo-element-roundup/</a>
+    <div class="group">
+        <p>1</p>
+        <p>2</p>
+    </div>
+
+</body>
+</html>
