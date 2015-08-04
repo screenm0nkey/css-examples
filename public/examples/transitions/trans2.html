@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #ExampleB {
+            width: 520px;
+        }
+        #ExampleB div {
+            width: 100px;
+            margin: 5px 0;
+            padding: 5px;
+            color: white;
+            background-color: #ED8029;
+            text-align: right;
+            border-radius: 5px;
+        }
+        #ExampleB:hover div {
+            width: 500px;
+        }
+        #ExampleB div.ease {
+            transition: 3s ease;
+        }
+        #ExampleB div.linear {
+            transition: 3s linear;
+        }
+        #ExampleB div.easein {
+            transition: 3s ease-in;
+        }
+        #ExampleB div.easeout {
+            transition: 3s ease-out;
+        }
+        #ExampleB div.easeinout {
+            transition: 3s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="ExampleB">
+        <div class="ease"></div>
+        <div class="linear"></div>
+        <div class="easein"></div>
+        <div class="easeout"></div>
+        <div class="easeinout"></div>
+    </div>
+
+</body>
+</html>
