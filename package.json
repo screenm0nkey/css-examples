@@ -1,20 +1,16 @@
 {
-  "name": "express-upload-progress",
+  "name": "css-examples",
   "version": "0.0.1",
-  "description": "example to show file uploading with express.js and progress bar",
+  "description": "collection of css examples",
   "scripts": {
-    "start": "node app"
+    "start": "node bin/www",
+    "live" : "live-server --open=/public"
   },
   "dependencies": {
     "express": "~3.1.0"
   },
   "author": {
-    "name": "Mirco Zeiss",
-    "email": "mirco.zeiss@gmail.com",
-    "twitter": "zeMirco"
-  },
-  "engines": {
-    "node": "0.8.x",
-    "npm": "1.1.x"
+    "name": "Nick Lowman",
+    "email": "nick@fedev.io"
   }
 }

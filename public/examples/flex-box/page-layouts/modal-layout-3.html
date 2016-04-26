@@ -5,23 +5,23 @@
     <title>Modal 2</title>
     <style>
         ul { margin:0; list-style: none; padding:0;}
-        .modal {}
-        .header{background-color: #0b97c4}
+        .settings-dialog {}
+        .modal-header {background-color: #0b97c4}
         .nav {background-color: lightpink}
         .row-1 {background-color: orange}
         .col-1 {background-color: goldenrod}
         .col-2 {background-color: greenyellow}
         .col-3 {background-color: olivedrab}
         .col-4 {background-color: palevioletred}
-        .footer {background-color: lightcoral}
+        .modal-footer {background-color: lightcoral}
 
-        .modal, .body, .content {
+        .settings-dialog, .modal-body, .content {
             display : flex;
             flex-flow : row wrap;
         }
 
-        .modal > * {flex : 1 100%;}
-        .body > * {flex : 1 100%;}
+        .settings-dialog > * {flex : 1 100%;}
+        .modal-body > * {flex : 1 100%;}
         .content > * {flex : 1 100%;}
 
         .nav { flex: 1 auto; }
