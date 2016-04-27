@@ -76,28 +76,7 @@
         </div>
     </div>
 </div>
-<script src="/libs/jquery.js"></script>
-<script>
-    $(document).ready(function(){
-        $('.nav a[href^="#"]').on('click',function (e) {
-            e.preventDefault();
-            var elemId = this.hash;
-            var $target = $(elemId);
-
-            $('.content').animate({
-                scrollTop: $target.parent().scrollTop() + $target.offset().top - $target.parent().offset().top
-            }, {
-                duration: 500,
-                specialEasing: {
-                    width: 'linear',
-                    height: 'easeOutBounce'
-                },
-                complete: function (e) {
-                    console.log("animation completed");
-                }
-            });
-        });
-    });
-</script>
+<script src="/public/libs/jquery.js"></script>
+<script src="nickScrollTo.js"></script>
 </body>
 </html>

@@ -7,7 +7,7 @@
         .nav li { height : 100px;}
 
         ul { margin:0; list-style: none; padding:0;}
-        .modal-header {background-color: #0b97c4}
+        .header{background-color: #0b97c4}
         .nav {background-color: lightpink}
         .nav li {background:indianred; border : solid 1px white;}
         .row-1 {background-color: orange}
@@ -15,10 +15,10 @@
         .col-2 {background-color: greenyellow}
         .col-3 {background-color: olivedrab}
         .col-4 {background-color: palevioletred}
-        .modal-footer {background-color: lightcoral}
-        .row-1, .modal-footer {height : 50px; }
+        .footer {background-color: lightcoral}
+        .row-1, .footer {height : 50px; }
 
-        .settings-dialog, .modal-body, .content {
+        .modal, .body, .content {
             display : flex;
             flex-flow : row wrap;
         }
@@ -30,8 +30,8 @@
         }
 
 
-        .settings-dialog > * {flex : 1 100%;}
-        .modal-body > * {flex : 1 100%;}
+        .modal > * {flex : 1 100%;}
+        .body > * {flex : 1 100%;}
         .content > * {flex : 1 100%;}
         .nav { flex: 1 100%; }
         .content { flex: 5 100%; }
@@ -48,7 +48,7 @@
             .nav { flex: 1 auto; display: block}
             .content { flex: 5 auto; }
             .content .row-1 { flex: 1 100%; }
-            .content .modal-footer { flex: 1 100%; }
+            .content .footer { flex: 1 100%; }
             .content .col { flex: 1 auto; }
             .content .col-3 { flex: 2 auto; }
         }
